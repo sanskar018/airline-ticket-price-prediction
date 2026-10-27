@@ -1,32 +1,32 @@
 # Airline Ticket Price Prediction — Streamlit App
+# ✈️ Airline Ticket Price Prediction
+
+A beginner-friendly data science project that estimates airline ticket prices
+from a historical flight-price dataset.
+
+## Features
+- Data cleaning and descriptive statistics
+- Data visualization (histogram, box plot, bar, pie, scatter, line charts)
+- Probability and random sampling
+- Central Limit Theorem demonstration
+- T-test: nonstop vs connecting flight prices
+- Multiple linear regression using duration, days left, and number of stops
+- Interactive Streamlit web app for price prediction
 
 ## Files
-- `app.py` — Streamlit web app
-- `requirements.txt` — required Python packages
+- `Airline_Ticket_Price_Prediction_Streamlit.ipynb`: Google Colab notebook
+- `app.py`: Streamlit web app
+- `requirements.txt`: Python dependencies
 
 ## Dataset
-Use the flight-price CSV used in the notebook. The app expects these columns:
-- `duration`
-- `days_left`
-- `stops`
-- `price`
+[Indian Flight Price Prediction (Kaggle)](https://www.kaggle.com/datasets/shubhambathwal/flight-price-prediction).
+Download `Clean_Dataset.csv` and upload it in the app's sidebar.
 
-The common Kaggle flight-price dataset from the project has these columns.
+## Run locally
+pip install -r requirements.txt
+streamlit run app.py
 
-## Run on your computer
-1. Install Python.
-2. Extract this ZIP folder.
-3. Open Command Prompt/Terminal in this folder.
-4. Install packages:
+## Limitations
+The model uses only duration, days left, and stops. It is trained on
+historical data and does not provide live booking prices.
 
-   `pip install -r requirements.txt`
-
-5. Start the app:
-
-   `streamlit run app.py`
-
-6. Open the local URL shown in the terminal (usually `http://localhost:8501`).
-7. Upload your flight-price CSV using the sidebar.
-
-## Important
-This model is a simple multiple linear regression model using duration, days left, and number of stops. It uses historical data and does not return live fares. The app retrains the model from the CSV each time the app reruns.
